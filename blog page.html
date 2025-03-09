@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Blog Page</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <script defer src="script.js"></script> 
+<style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left-align;
+    background: url('https://www.salveinternational.org/wp-content/uploads/2021/08/brian-garcia-13VwsTt9pAw-unsplash-768x512.jpeg') no-repeat center center/cover; 
+     color: #fff;
+}
+
+/* Hide sections by default */
+.hidden {
+    display: none;
+}
+
+/* Landing Page */
+#landing-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.landing-content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Blog Content */
+#blog-content {
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+button {
+    background: #ff7b54;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ff5a36;
+}
+
+/* Search Bar */
+#search-bar {
+    margin-top: 10px;
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+
+.footer-bottom {
+    background-color: #1a252f;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 20px;
+}</style></head> 
+<body> 
+
+    <!-- Landing Page -->
+    <div id="landing-page">
+    <h1 id="landing-text">Welcome to Blog Page</h1>
+    <button onclick="enterBlog()">Enter</button>
+</div>
+
+<div id="blog-content" class="hidden">
+    <h2>Blog Page</h2>
+    <p>Here is the blog content.</p>
+</div>
+
+        <!-- Navigation Menu -->
+        <nav> 
+            <button onclick="showSection('home')">Home</button> 
+            <button onclick="showSection('about')">About</button> 
+            <button onclick="toggleSearch()">🔍</button> 
+        </nav> 
+
+        <!-- Search Bar -->
+        <div id="search-bar" class="hidden"> 
+            <input type="text" id="search-input" placeholder="Search posts..."> 
+            <button onclick="searchPosts()">Search</button> 
+        </div> 
+
+        <!-- Homepage / Blog Feed -->
+        <section id="home"> 
+            <h2>Recent Posts</h2> 
+            <div id="posts"> 
+                <div class="blog-post"> 
+                    <h3>Why Mental Health Matters</h3> 
+                    <p><strong>By Ronalyn Dellera (a professional overthinker and part-time life struggler)</strong></p> 
+                    <p>Let’s be real—life is hard. One minute, you’re fine, and the next, you’re questioning all your life choices at 2 AM. That’s why mental health is so important. But the problem is, a lot of people still don’t get it. They think stress is just "all in your head" or that you can magically cure sadness by "thinking positive." If only it were that easy, right?</p> 
+                   <p>If people actually took mental health seriously, the world would be a much better place. Imagine if, instead of saying “just get over it,” people actually listened and tried to understand. A little kindness and empathy go a long way. So let’s stop the judgment, start real conversations, and remind each other that it’s okay to not be okay.</p> 
+  
+                </div> 
+            </div> 
+        </section> 
+
+        <!-- About Page (Initially Hidden) -->
+        <section id="about" class="hidden"> 
+    <h2>About This Blog</h2> 
+    <p>This blog is created by Ronalyn Dellera. It’s a space where people can share thoughts, experiences, and engage with others.</p>
+    <p>Feel free to contact me at: <strong>ronalyndellera118@gmail.com</strong></p>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: ronalyndellera118@gmail.com</p>
+            <p>Phone: +63 9925742714</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2025 Blog Page. All Rights Reserved. | Designed by Ronalyn Dellera</p>
+</footer>
+
+
+<script type="text/javascript" id="dcoder_script">// Function to enter blog from landing page
+let clickedOnce = false; // Track if button is clicked once
+
+function enterBlog() {
+    let landingText = document.getElementById("landing-text");
+
+    if (!clickedOnce) {
+        // First click: Change text to "Scroll down to see the content"
+        landingText.innerText = "Scroll down to see the content";
+        clickedOnce = true;
+    } else {
+        // Second click: Hide landing page and show blog content
+        document.getElementById("landing-page").classList.add("hidden");
+        document.getElementById("blog-content").classList.remove("hidden");
+    }
+}
+
+// Function to show sections (Home, About)
+function showSection(section) {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("about").classList.add("hidden");
+    document.getElementById(section).classList.remove("hidden");
+}
+
+// Function to toggle search bar
+function toggleSearch() {
+    document.getElementById("search-bar").classList.toggle("hidden");
+}
+
+// Load static content on page load
+window.onload = function () {
+    // You can add any page initialization code here if needed.
+};</script></body></html>
